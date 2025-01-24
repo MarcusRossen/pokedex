@@ -12,3 +12,4 @@ C:\Users\marcu\OneDrive\Desktop\skole\c#\OOP\pokedex\obj\Debug\net9.0\refint\pok
 C:\Users\marcu\OneDrive\Desktop\skole\c#\OOP\pokedex\obj\Debug\net9.0\pokedex.pdb
 C:\Users\marcu\OneDrive\Desktop\skole\c#\OOP\pokedex\obj\Debug\net9.0\pokedex.genruntimeconfig.cache
 C:\Users\marcu\OneDrive\Desktop\skole\c#\OOP\pokedex\obj\Debug\net9.0\ref\pokedex.dll
+C:\Users\marcu\OneDrive\Desktop\skole\c#\OOP\pokedex\obj\Debug\net9.0\pokedex.sourcelink.json

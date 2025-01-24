@@ -1,6 +1,3 @@
-using System.Reflection.Metadata;
-using System.Runtime.CompilerServices;
-
 namespace pokedex;
 
 public class Login()
@@ -17,14 +14,15 @@ public class Login()
             Console.Write("Indtast adgangskode: ");
             string? password = Console.ReadLine();
 
+            // checkLogin() returnere true eller false, sæt IsLoggedIn til det
             user.IsLoggedIn = CheckLogin(username, password);
-        } while (!user.IsLoggedIn);
+        } while (!user.IsLoggedIn); // bliv i loopet så længe IsLoggedIn er falsk
 
         Console.WriteLine("\nLogin succesfuldt...");
-        Thread.Sleep(1500);
+        Thread.Sleep(1250);
     }
 
-    public bool CheckLogin(string? username, string? password)
+    public bool CheckLogin(string? username, string? password) // parameter til at tage input username og -password med
     {
         string filePath = "users.csv";
         string[] users = File.ReadAllLines(filePath).Skip(1).ToArray();
@@ -33,17 +31,21 @@ public class Login()
         {
             string[] values = user.Split(",");
 
+            // tjek input med users.csv fil, brugernavn er case-insensitive
             if (username?.ToLower() == values[0].ToLower() && password == values[1])
+                // hvis alt passer, return true
                 return true;
         }
 
         Console.WriteLine("\nUgyldig bruger indtastet");
         Console.ReadKey();
+        // hvis det ikke passer, return false, for at blive i loopet og prøve igen
         return false;
     }
 }
 
 public class User()
 {
+    // hold styr på om brugeren er logget ind
     public bool IsLoggedIn { get; set; }
 }
